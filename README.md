@@ -913,5 +913,5 @@ return 0;
 3. **Iterating Over the Map**: The `map` is iterated using a range-based for loop to access each `pair`.
 
 This demonstrates the versatility and utility of the `pair` class in C++.
-### isdigit()
-The isdigit() function in C++ is used to check if a given character is a digit (0-9). It is part of the <cctype> library.
+
+
