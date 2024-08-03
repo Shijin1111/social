@@ -1021,3 +1021,57 @@ int main() {
     return 0;
 }
 ```
+#### in C++
+```cpp
+#include <iostream>
+#include <queue>
+#include <vector>
+
+using namespace std;
+
+void BFS(vector<vector<int>>& adjMatrix, int start) {
+    int n = adjMatrix.size();
+    vector<bool> visited(n, false);
+    queue<int> q;
+
+    q.push(start);
+    visited[start] = true;
+
+    cout << "BFS Traversal: ";
+
+    while (!q.empty()) {
+        int node = q.front();
+        q.pop();
+        cout << node << " ";
+
+        for (int i = 0; i < n; i++) {
+            if (adjMatrix[node][i] == 1 && !visited[i]) {
+                q.push(i);
+                visited[i] = true;
+            }
+        }
+    }
+    cout << endl;
+}
+
+int main() {
+    int n, start;
+    cout << "Enter number of nodes: ";
+    cin >> n;
+
+    vector<vector<int>> adjMatrix(n, vector<int>(n));
+    cout << "Enter Adjacency matrix for the graph: " << endl;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            cin >> adjMatrix[i][j];
+        }
+    }
+
+    cout << "Enter starting node (0-" << (n - 1) << "): ";
+    cin >> start;
+
+    BFS(adjMatrix, start);
+
+    return 0;
+}
+```
