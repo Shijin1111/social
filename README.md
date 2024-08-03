@@ -955,3 +955,69 @@ int main() {
     return 0;
 }
 ```
+### BFS traversal
+```cpp
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <unordered_set>
+
+using namespace std;
+
+class Graph {
+public:
+    Graph(int vertices);
+    void addEdge(int u, int v);
+    void BFS(int start);
+
+private:
+    vector<vector<int>> adjList;
+    int numVertices;
+};
+
+Graph::Graph(int vertices) : numVertices(vertices) {
+    adjList.resize(vertices);
+}
+
+void Graph::addEdge(int u, int v) {
+    adjList[u].push_back(v);
+    adjList[v].push_back(u); // If the graph is undirected
+}
+
+void Graph::BFS(int start) {
+    vector<bool> visited(numVertices, false);
+    queue<int> q;
+
+    visited[start] = true;
+    q.push(start);
+
+    while (!q.empty()) {
+        int node = q.front();
+        q.pop();
+        cout << node << " ";
+
+        for (int neighbor : adjList[node]) {
+            if (!visited[neighbor]) {
+                visited[neighbor] = true;
+                q.push(neighbor);
+            }
+        }
+    }
+}
+
+int main() {
+    Graph g(6);
+
+    g.addEdge(0, 1);
+    g.addEdge(0, 2);
+    g.addEdge(1, 3);
+    g.addEdge(1, 4);
+    g.addEdge(2, 5);
+
+    cout << "BFS starting from node 0: ";
+    g.BFS(0);
+    cout << endl;
+
+    return 0;
+}
+```
