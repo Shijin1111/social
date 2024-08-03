@@ -916,7 +916,7 @@ This demonstrates the versatility and utility of the `pair` class in C++.
 
 
 ### DFS traversal of a graph
-```
+```cpp
 #include <iostream>
 #include <vector>
 
