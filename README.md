@@ -915,3 +915,43 @@ return 0;
 This demonstrates the versatility and utility of the `pair` class in C++.
 
 
+### DFS traversal of a graph
+```
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+void dfs(int node, vector<vector<int>>& graph, vector<bool>& visited) {
+    visited[node] = true;
+    cout << node << " ";
+
+    for (int neighbor : graph[node]) {
+        if (!visited[neighbor]) {
+            dfs(neighbor, graph, visited);
+        }
+    }
+}
+
+int main() {
+    // Example graph represented as an adjacency list
+    vector<vector<int>> graph = {
+        {1, 2},     // Neighbors of node 0
+        {0, 3, 4},  // Neighbors of node 1
+        {0, 4},     // Neighbors of node 2
+        {1, 4, 5},  // Neighbors of node 3
+        {1, 2, 3},  // Neighbors of node 4
+        {3}         // Neighbors of node 5
+    };
+
+    int numNodes = graph.size();
+    vector<bool> visited(numNodes, false);
+
+    // Start DFS from node 0
+    cout << "DFS traversal starting from node 0: ";
+    dfs(0, graph, visited);
+    cout << endl;
+
+    return 0;
+}
+```
