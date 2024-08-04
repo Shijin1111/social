@@ -833,7 +833,7 @@ Each right shift by `n` positions effectively divides `x` by `2^n` in terms of i
 - When you perform a bitwise right shift (`>>`), you effectively add zeros to the left of the binary representation of the number.
 
 &nbsp;
-
+### pair
 The `pair` class in the C++ Standard Template Library (STL) is a simple container that stores two heterogeneous objects as a single unit. The `pair` class is defined in the `<utility>` header. It is particularly useful for creating complex data structures, such as maps, where each element is a key-value pair.
 
 ### Syntax  
