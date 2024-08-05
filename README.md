@@ -513,6 +513,7 @@ Choose `std::set` or `std::unordered_set` based on your specific requirements re
             std::cout << "Found at index " << std::distance(nums.begin(), it) << std::endl;
         }
         ```
+        Check the syntax.(3parameters);
         
 
 Using `copy()` with Vectors
