@@ -109,7 +109,8 @@ In C++, strings are managed through the Standard Template Library (STL), which p
 ### Searching and Finding
 
 - **Finding Substrings**
-    Different in vector search.
+
+  Different in vector search.
     ```cpp
     size_t pos = s1.find("World"); // Find the first occurrence of "World" in s1
     if (pos != std::string::npos) {
