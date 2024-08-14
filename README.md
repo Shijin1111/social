@@ -504,7 +504,8 @@ Choose `std::set` or `std::unordered_set` based on your specific requirements re
     ```
     
 8.  **Searching**:
-    
+
+    You have to use begin() and end()!!!!!
     - Searching for an element using `std::find`:
         
         ```cpp
