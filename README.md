@@ -104,7 +104,8 @@ In C++, strings are managed through the Standard Template Library (STL), which p
     ```cpp
     s1.replace(6, 10, "Wonderful"); // Replace 10 characters starting from position 6 with "Wonderful"
     ```
-- **isalnum(ch)**: This function checks if the character ch is alphanumeric (either a letter or a digit). It returns a non-zero value (true) if ch is alphanumeric and zero (false) otherwise.
+- **isalnum(ch)**
+    This function checks if the character ch is alphanumeric (either a letter or a digit). It returns a non-zero value (true) if ch is alphanumeric and zero (false) otherwise.
 
 ### Searching and Finding
 
