@@ -22,6 +22,8 @@ Reverse each row
 ### <span style="color: #2dc26b;">(when u swap make sure to put j=i+1; )</span>
 
 * * *
+use #include<numeric> for mathematical funtions.(math.h may not work);
+examples of this fns:  gcd(16,4) gives 4;
 
 # <span style="color: #e03e2d;">STRING METHODS IN C++</span>
 
