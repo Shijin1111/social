@@ -23,7 +23,7 @@ Reverse each row
 
 * * *
 ### use #include<numeric> for mathematical funtions.(math.h may not work);
-### examples of this fns:  gcd(16,4) gives 4;
+examples of this fns:  gcd(16,4) gives 4;
 
 # <span style="color: #e03e2d;">STRING METHODS IN C++</span>
 
