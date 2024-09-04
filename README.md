@@ -27,7 +27,7 @@ Reverse each row
 ### rand() is used to get a random number
 ##### int randomNumber = rand();
 ### power can be found using pow()
-##### 3*3*3*3 = pow(3,4);
+##### "3*3*3*3" = pow(3,4);
 
 
 # <span style="color: #e03e2d;">STRING METHODS IN C++</span>
