@@ -783,6 +783,18 @@ int decimal = stoi(binary, nullptr, 2);
  where binary is the  string="10011110"
  and 2 specifies the string is binary
 ```
+### we can do this to any base ###
+```
+#include <iostream>
+using namespace std;
+int main()
+{
+    string s;
+    cin>>s;
+    cout<<stoi(s,nullptr,17);
+    return 0;
+}
+```
 
 We can do bitwise AND using one & as follows. also OR as 4|5.
 
