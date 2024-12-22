@@ -1098,3 +1098,12 @@ int main() {
     return 0;
 }
 ```
+### Normal array in c++
+```
+int main()
+{
+    int arr[] = {2,8,8,9,87,22353,535};
+    int arr_size = sizeof(arr)/sizeof(arr[0]);
+    return 0;
+}
+```
