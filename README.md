@@ -678,6 +678,10 @@ int main() {
     return 0;
 }
 ```
+can do the same with vector to set
+```
+unordered_set st(vec.begin(),vec.end());
+```
 
 #### Method 2: Using `std::vector::push_back`
 
