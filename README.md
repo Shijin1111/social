@@ -1111,3 +1111,43 @@ int main()
     return 0;
 }
 ```
+
+## Quick sort in C++ 
+```
+#include <iostream>
+#include <vector>
+std::vector<int> quickSort_cpp(std::vector<int>& vec)
+{
+    if (vec.size() <= 1)
+        return vec;
+    int pivot = vec.size()-1;
+    std::vector<int> left;
+    std::vector<int> right;
+    for (int i = 0; i < vec.size()-1; i++)
+    {
+        if (vec[i] < vec[pivot])
+            left.push_back(vec[i]);
+        else
+            right.push_back(vec[i]);
+    }
+    
+    std::vector<int> sorted_left = quickSort_cpp(left);
+    std::vector<int> sorted_right = quickSort_cpp(right);
+    sorted_left.push_back(vec[pivot]);
+    sorted_left.insert(sorted_left.end(), sorted_right.begin(), sorted_right.end());
+    return sorted_left;    
+}
+
+int main() {
+    std::vector<int> vec = {10, 7, 8, 9, 1, 5};
+    int n = vec.size();
+    vec = quickSort_cpp(vec);
+    std::cout << "C++ QuickSort: ";
+    for (int x : vec) {
+        std::cout << x << " ";
+    }
+    std::cout << std::endl;
+    
+    return 0;
+}
+```
