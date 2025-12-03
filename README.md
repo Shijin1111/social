@@ -1113,7 +1113,7 @@ int main()
 ```
 
 ## Quick sort in C++ 
-```
+```cpp
 #include <iostream>
 #include <vector>
 std::vector<int> quickSort_cpp(std::vector<int>& vec)
