@@ -982,6 +982,34 @@ int main() {
     return 0;
 }
 ```
+### DFS of trees
+if not binary tree then similar to graph dfs.If binary tree then,
+```cpp
+void inorder(TreeNode* root) {
+    if (!root) return;
+    inorder(root->left);
+    cout << root->val << " ";
+    inorder(root->right);
+}
+```
+### BFS in trees
+if not binary tree then just follow graph method.if binary tree then,
+```cpp
+void bfs(TreeNode* root) {
+    if (!root) return;
+    
+    queue<TreeNode*> q;
+    q.push(root);
+
+    while (!q.empty()) {
+        TreeNode* node = q.front();
+        q.pop();
+        cout << node->val << " ";
+        if (node->left) q.push(node->left);
+        if (node->right) q.push(node->right);
+    }
+}
+```
 ### BFS traversal
 ```cpp
 #include <iostream>
